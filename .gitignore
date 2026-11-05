@@ -1,0 +1,35 @@
+cd ~/Developer/ChestX-Trust
+
+cat > .gitignore <<'EOF'
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets
+ml/data/*
+!ml/data/.gitkeep
+
+# Model checkpoints
+experiments/checkpoints/*
+!experiments/checkpoints/.gitkeep
+
+# Experiment outputs
+experiments/results/*
+experiments/plots/*
+
+# Environment variables
+.env
+.env.*
+
+# Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# System
+.DS_Store
+EOF
